@@ -1,64 +1,53 @@
-
 # 🔐 Prueba de Acceso Controlado hacia el Servidor AD
+
+---
 
 ### 🎯 Objetivo
 
-Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios específicos habilitados en el servidor de Active Directory (AD).
+Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios específicos habilitados en el servidor de Active Directory (AD), según las políticas configuradas en el firewall.
 
 ---
 
 ### 🧪 Entorno
 
-- Servidor AD: 10.10.20.3 – VLAN20
-- Clientes: VLAN10 (Administración), VLAN30 (Usuarios), VLAN40 (Invitados)
-- Servicios permitidos en el firewall: DNS, LDAP, Kerberos, SMB, RPC, HTTP/HTTPS
-- Firewall: WatchGuard con reglas específicas por servicio
+- **Servidor AD:** 10.10.20.3 – VLAN20  
+- **Clientes:**  
+  - VLAN10 – Usuarios internos  
+  - VLAN30 – Usuarios administrativos  
+  - VLAN40 – Invitados  
+- **Firewall:** WatchGuard FireboxV  
+- **Servicios permitidos:** DNS, LDAP, Kerberos, SMB, RPC, HTTP/HTTPS
+
+---
+![Políticas configuradas en WatchGuard](../imagenes/politicas-firewall.png)
+
+### 🔐 Políticas de Firewall aplicadas
+
+| VLAN Origen | Destino (VLAN20) | Servicios permitidos                          |
+|-------------|------------------|-----------------------------------------------|
+| VLAN10      | Servidor AD      | DNS (53), LDAP (389), HTTP/HTTPS (80/443)     |
+| VLAN30      | Servidor AD      | DNS, LDAP, Kerberos (88), SMB (445), RPC (135), HTTP/HTTPS |
+| VLAN40      | Bloqueada        | Ningún servicio permitido (todo el tráfico denegado) |
 
 ---
 
-### 🔧 Procedimiento
+### 🔧 Procedimiento.
 
-**Paso 1:** Comprobar resolución DNS desde un cliente en VLAN10.
+### 🖼️ Evidencia: Políticas del firewall.
 
-```bash
-nslookup ad.cbtech.local 10.10.20.3
-```
+![Políticas configuradas en WatchGuard](../imagenes/politicas-firewall.png)
 
-→ Debe mostrar la IP del servidor AD, confirmando que el servicio DNS está permitido.
+### 🖼️ Evidencia: Ping desde VLAN10 al servidor AD.
 
----
+![Respuesta de ping desde VLAN10](../imagenes/ping-vlan10-ad.png)
 
-**Paso 2:** Realizar una consulta LDAP desde un cliente autorizado.
+- Desde VLAN10 y VLAN30 puede estar permitido (según política).
+- Desde VLAN40 debe estar bloqueado.
 
-```bash
-ldapsearch -x -H ldap://10.10.20.3 -b "dc=cbtech,dc=local"
-```
+### 🖼️ Evidencia: Ping denegado de VLAN10 hacia VLAN40.
 
-→ El comando debe devolver información del directorio si el puerto 389 está habilitado.
+![Ping denegado de VLAN10 a VLAN40](../imagenes/ping-vlan10-a-vlan40-denegado.png)
 
----
+### 🖼️ Evidencia: Acceso al servidor web (HTTP/HTTPS).
 
-**Paso 3:** Verificar acceso a puertos Kerberos, SMB y RPC.
-
-```bash
-nmap -Pn -p 88,135,445 10.10.20.3
-```
-
-→ Estos puertos deben aparecer como abiertos (`open`) desde las VLANs autorizadas.
-
----
-
-**Paso 4:** Escanear todos los servicios permitidos en un solo comando.
-
-```bash
-nmap -Pn -p 53,389,445,88,135,80,443 10.10.20.3
-```
-
-→ Deben estar `open` únicamente los puertos que están definidos como permitidos.
-
----
-
-**Paso 5:** Validar tráfico en el Traffic Monitor del firewall.
-
-→ Solo deben aparecer registros de tráfico autorizado (DNS, LDAP, etc.) y no debe haber otros intentos de acceso.
-
+![Acceso exitoso al servidor web](../imagenes/acceso-web-server.png)
