@@ -1,5 +1,6 @@
-
-<img src = "https://github.com/cbenitez191/cbenitez191/blob/main/img/about_me.gif?raw=true" width = 40px></picture>
+<p align="center">
+  <img src="https://github.com/cbenitez191/cbenitez191/blob/main/img/about_me.gif?raw=true" alt="About Me" width="300px">
+</p>
 
 # 🧪 Laboratorios de Ciberseguridad
 
