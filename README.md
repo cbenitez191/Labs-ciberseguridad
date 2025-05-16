@@ -1,3 +1,6 @@
+
+<img src = "https://github.com/cbenitez191/cbenitez191/blob/main/img/about_me.gif?raw=true" width = 40px></picture>
+
 # 🧪 Laboratorios de Ciberseguridad
 
 Este repositorio contiene una colección de laboratorios prácticos orientados a la implementación, prueba y documentación de conceptos fundamentales en ciberseguridad ofensiva y defensiva.
