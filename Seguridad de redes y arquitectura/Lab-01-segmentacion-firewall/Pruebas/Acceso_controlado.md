@@ -1,14 +1,14 @@
-# 🔐 Prueba de Acceso Controlado hacia el Servidor AD
+# 🔐 Prueba de acceso controlado hacia el Servidor AD
 
 ---
 
-### 🎯 Objetivo
+### 🎯 Objetivo.
 
 Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios específicos habilitados en el servidor de Active Directory (AD), según las políticas configuradas en el firewall.
 
 ---
 
-### 🧪 Entorno
+### 🧪 Entorno.
 
 - **Servidor AD:** 10.10.20.3 – VLAN20  
 - **Clientes:**  
@@ -21,7 +21,7 @@ Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios e
 ---
 ![Políticas configuradas en WatchGuard](../imagenes/politicas-firewall.png)
 
-### 🔐 Políticas de Firewall aplicadas
+### 🔐 Políticas de Firewall aplicadas.
 
 | VLAN Origen | Destino (VLAN20) | Servicios permitidos                          |
 |-------------|------------------|-----------------------------------------------|
