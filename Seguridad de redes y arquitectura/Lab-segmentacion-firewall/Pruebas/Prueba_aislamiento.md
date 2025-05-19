@@ -102,7 +102,7 @@ nmap -Pn -p 53,389,445,88,135 10.10.20.3
 ```
 → Los puertos configurados como permitidos deben aparecer como `open`.
 
-<p align="center"> <img src="imagenes/Puertos NMAP.png" width="800px"> </p>
+<p align="center"> <img src="../imagenes/Puertos NMAP.png" width="800px"> </p>
 
 > 📌 Descripción: Resultado del escaneo Nmap desde un cliente en VLAN autorizada hacia el servidor AD. Se observa que los puertos DNS (53), LDAP (389), Kerberos (88), SMB (445) y RPC (135) aparecen como open, confirmando que las reglas del firewall permiten correctamente el tráfico hacia estos servicios esenciales.
 
@@ -112,8 +112,8 @@ nmap -Pn -p 53,389,445,88,135 10.10.20.3
 
 → Solo los servicios definidos en las reglas deben aparecer como permitidos.
 
-<p align="center"> <img src="imagenes/nmap-puertos-abiertos-ad.png" width="8``00px"> </p>
-<p align="center"> <img src="imagenes/Trafico Allow.png" width="800px"> </p>
+<p align="center"> <img src="../imagenes/nmap-puertos-abiertos-ad.png" width="8``00px"> </p>
+<p align="center"> <img src="../imagenes/Trafico Allow.png" width="800px"> </p>
 
 >📌 Descripción: Comparativa entre registros de tráfico autorizado (primera imagen) y tráfico bloqueado (segunda imagen), evidenciando el comportamiento controlado del firewall.
 
