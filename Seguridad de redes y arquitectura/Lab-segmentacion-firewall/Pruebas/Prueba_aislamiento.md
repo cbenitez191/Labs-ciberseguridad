@@ -33,16 +33,16 @@ ping 192.168.40.10
 <p align="center"> <img src="../imagenes/Ping VLAN 10 to VLAN30.png" width="800px"> </p>
 <p align="center"> <img src="../imagenes/Ping VLAN 10 to VLAN40.png" width="800px"> </p>
 
- 📌 **Descripción:** Evidencia visual del intento de ping desde VLAN10 hacia VLAN30-40. El resultado "Request timed out" valida que la política de aislamiento entre VLANs está aplicada correctamente.
+> 📌 **Descripción:** Evidencia visual del intento de ping desde VLAN10 hacia VLAN30-40. El resultado "Request timed out" valida que la política de aislamiento entre VLANs está aplicada correctamente.
  
-
+----
 **Paso 2:** Verificar los registros de tráfico bloqueado en el firewall (Traffic Monitor o Log Server).
 
 → Se deben observar intentos bloqueados entre VLANs por las políticas `deny`.
 
 <p align="center"> <img src="../imagenes/Trafico Deny VLAns.png" width="800px"> </p>
 
- 📌 **Descripción:** Captura del monitor de tráfico del firewall mostrando intentos de comunicación denegados entre VLANs. Este registro es evidencia de que las reglas deny están activas y funcionando.
+> 📌 **Descripción:** Captura del monitor de tráfico del firewall mostrando intentos de comunicación denegados entre VLANs. Este registro es evidencia de que las reglas deny están activas y funcionando.
 
 ---
 
@@ -74,7 +74,7 @@ nslookup ad.cbtech.local 10.10.20.3
 
 <p align="center"> <img src="../imagenes/Consulta DNS.png" width="800px"> </p>
 
- 📌 **Descripción:**Resultado exitoso del comando nslookup desde VLAN10. Se confirma que el servicio DNS hacia el servidor AD está disponible como lo permite la política del firewall.
+> 📌 **Descripción:**Resultado exitoso del comando nslookup desde VLAN10. Se confirma que el servicio DNS hacia el servidor AD está disponible como lo permite la política del firewall.
 
 
 **Paso 2:** Realizar consulta LDAP contra el servidor AD.
