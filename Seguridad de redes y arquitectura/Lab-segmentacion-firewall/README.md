@@ -1,4 +1,9 @@
 # 🧱 Lab 13: Segmentación de red y Reglas de Firewall.
+## 🕸️ Topología de red
+
+<p align="center">
+  <img src="imagenes/Topologia de red.png" width="600px">
+</p>
 
 Este laboratorio demuestra cómo aplicar segmentación de red utilizando VLANs y establecer reglas de firewall basadas en el principio de mínimo privilegio. Forma parte de mi portafolio de ciberseguridad práctica.
 
