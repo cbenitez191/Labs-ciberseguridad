@@ -33,21 +33,29 @@ Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios e
 
 ### 🔧 Procedimiento.
 
-### 🖼️ Evidencia: Políticas del firewall.
+### 🖼️ Evidencia: Políticas del firewall
 
-![Políticas configuradas en WatchGuard](../imagenes/politicas-firewall.png)
+<p align="center">
+  <img src="imagenes/Politicas firewall 1.png" width="600px">
+</p>
 
-### 🖼️ Evidencia: Ping desde VLAN10 al servidor AD.
+### 🖼️ Evidencia: Ping desde VLAN40 al servidor AD.
 
-![Respuesta de ping desde VLAN10](../imagenes/ping-vlan10-ad.png)
+<p align="center">
+  <img src="imagenes/Comunicacion vlan 40 a vlan 20.png" width="500px">
+</p>
 
-- Desde VLAN10 y VLAN30 puede estar permitido (según política).
-- Desde VLAN40 debe estar bloqueado.
+- Desde VLAN10 y VLAN30 puede realizar ping ala red de servidores de acuerdo con las políticas.
+- Desde las VLAN (10,30,40) debe estar bloqueada la comunicación .
 
 ### 🖼️ Evidencia: Ping denegado de VLAN10 hacia VLAN40.
 
-![Ping denegado de VLAN10 a VLAN40](../imagenes/ping-vlan10-a-vlan40-denegado.png)
+<p align="center">
+  <img src="imagenes/Comunicacion vlan 10 y vlan 40 off.png" width="500px">
+</p>
 
 ### 🖼️ Evidencia: Acceso al servidor web (HTTP/HTTPS).
 
-![Acceso exitoso al servidor web](../imagenes/acceso-web-server.png)
+<p align="center">
+  <img src="imagenes/Conexion VPN user 1 acces HTTP.png" width="500px">
+</p>
