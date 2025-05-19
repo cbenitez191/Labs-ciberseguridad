@@ -32,20 +32,20 @@ Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios e
 ### 🖼️ Evidencia: Políticas del firewall.
 
 <p align="center">
-  <img src="imagenes/Politicas firewall 1.png" width="600px">
+  <img src="../imagenes/Politicas firewall 1.png" width="600px">
 </p>
 ### 🔧 Procedimiento.
 
 ### 🖼️ Evidencia: Políticas del firewall
 
 <p align="center">
-  <img src="imagenes/Politicas firewall 1.png" width="600px">
+  <img src="../imagenes/Politicas firewall 1.png" width="600px">
 </p>
 
 ### 🖼️ Evidencia: Ping desde VLAN40 al servidor AD.
 
 <p align="center">
-  <img src="imagenes/Comunicacion vlan 40 a vlan 20.png" width="500px">
+  <img src="../imagenes/Comunicacion vlan 40 a vlan 20.png" width="500px">
 </p>
 
 - Desde VLAN10 y VLAN30 puede realizar ping ala red de servidores de acuerdo con las políticas.
