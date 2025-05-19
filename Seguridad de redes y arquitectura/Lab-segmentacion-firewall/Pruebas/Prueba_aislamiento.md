@@ -25,8 +25,8 @@ Comprobar que no exista comunicación entre VLANs distintas sin autorización ex
 **Paso 1:** Ejecutar ping desde VLAN10 hacia VLAN30 y VLAN40.
 
 ```bash
-ping 192.168.30.10
-ping 192.168.40.10
+ping 10.10.30.XX
+ping 10.10.40.XX
 ```
 → Debe mostrar Request timed out o 100% packet loss, indicando que el ICMP fue bloqueado.
 
