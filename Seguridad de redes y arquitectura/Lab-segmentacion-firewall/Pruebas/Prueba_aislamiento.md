@@ -79,11 +79,19 @@ nslookup ad.cbtech.local 10.10.20.3
 
 **Paso 2:** Realizar consulta LDAP contra el servidor AD.
 
-```bash
-ldapsearch -x -H ldap://10.10.20.3 -b "dc=cbtech,dc=local"
-```
+### 🎯 Objetivo.
 
-→ Debe devolver entradas del directorio, confirmando conectividad.
+Confirmar que el puerto 389 (LDAP) del controlador de dominio `10.10.20.3` responde correctamente.
+
+```bash
+Test-NetConnection 10.10.20.3 -Port 389
+```
+→ Debe mostrar: TcpTestSucceeded : True, lo cual indica que el puerto 389 está abierto y funcional.
+
+<p align="center"> <img src="../imagenes/Test-NetConnetion.png" width="800px"> </p>
+<p align="center"> <img src="../imagenes/nltest dns.png" width="800px"> </p>
+
+> 📌 Descripción: Resultado exitoso del comando Test-NetConnection desde un cliente de red. Se observa TcpTestSucceeded : True, lo que confirma que el puerto LDAP está accesible y sin bloqueo por parte del firewall.
 
 ---
 
@@ -92,11 +100,21 @@ ldapsearch -x -H ldap://10.10.20.3 -b "dc=cbtech,dc=local"
 ```bash
 nmap -Pn -p 53,389,445,88,135 10.10.20.3
 ```
-
 → Los puertos configurados como permitidos deben aparecer como `open`.
+
+<p align="center"> <img src="imagenes/Puertos NMAP.png" width="800px"> </p>
+
+> 📌 Descripción: Resultado del escaneo Nmap desde un cliente en VLAN autorizada hacia el servidor AD. Se observa que los puertos DNS (53), LDAP (389), Kerberos (88), SMB (445) y RPC (135) aparecen como open, confirmando que las reglas del firewall permiten correctamente el tráfico hacia estos servicios esenciales.
 
 ---
 
 **Paso 4:** Verificar en los registros del firewall el tráfico autorizado y bloqueado.
 
 → Solo los servicios definidos en las reglas deben aparecer como permitidos.
+
+<p align="center"> <img src="imagenes/nmap-puertos-abiertos-ad.png" width="8``00px"> </p>
+<p align="center"> <img src="imagenes/Trafico Allow.png" width="800px"> </p>
+
+>📌 Descripción: Comparativa entre registros de tráfico autorizado (primera imagen) y tráfico bloqueado (segunda imagen), evidenciando el comportamiento controlado del firewall.
+
+------
