@@ -52,13 +52,18 @@ Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios e
 ### 🖼️ Evidencia: Ping denegado de VLAN10 hacia VLAN40.
 
 <p align="center">
-  <img src="imagenes/Comunicacion vlan 10 y vlan 40 off.png" width="800px">
+  <img src="../imagenes/Comunicacion vlan 10 y vlan 40 off.png" width="800px">
 </p>
+
 > 📌 **Descripción:** Intento fallido de conexión ICMP desde VLAN10 hacia un host en VLAN40. Esta evidencia demuestra que la política de aislamiento entre VLANs no autorizadas está correctamente aplicada, impidiendo comunicación lateral.
+
 ---
 
 ### 🖼️ Evidencia: Acceso al servidor web (HTTP/HTTPS).
 
 <p align="center">
-  <img src="imagenes/Conexion VPN user 1 acces HTTP.png" width="500px">
+  <img src="../imagenes/Conexion VPN user 1 acces HTTP.png" width="500px">
 </p>
+> 📌 **Descripción:** Captura del acceso exitoso a un servidor web (HTTP/HTTPS) alojado en el servidor AD desde una estación cliente. Confirma que los servicios HTTP/HTTPS han sido permitidos correctamente en el firewall para las VLAN autorizadas.
+
+---
