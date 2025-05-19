@@ -62,7 +62,7 @@ Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios e
 ### 🖼️ Evidencia: Acceso al servidor web (HTTP/HTTPS).
 
 <p align="center">
-  <img src="../imagenes/Conexion VPN user 1 acces HTTP.png" width="00px">
+  <img src="../imagenes/Conexion VPN user 1 acces HTTP.png" width="800px">
 </p>
 
 > 📌 **Descripción:** Captura del acceso exitoso a un servidor web (HTTP/HTTPS) alojado en el servidor AD desde una estación cliente. Confirma que los servicios HTTP/HTTPS han sido permitidos correctamente en el firewall para las VLAN autorizadas.
