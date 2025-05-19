@@ -30,7 +30,7 @@ ping 192.168.40.10
 ```
 → Debe mostrar Request timed out o 100% packet loss, indicando que el ICMP fue bloqueado.
 
-<p align="center"> <img src="../imagenes/Ping VLAN 10 to VLAN30.pngg" width="800px"> </p>
+<p align="center"> <img src="../imagenes/Ping VLAN 10 to VLAN30.png" width="800px"> </p>
 <p align="center"> <img src="../imagenes/Ping VLAN 10 to VLAN40.png" width="800px"> </p>
 
 📌 Descripción: Evidencia visual del intento de ping desde VLAN10 hacia VLAN30-40. El resultado "Request timed out" valida que la política de aislamiento entre VLANs está aplicada correctamente.
@@ -39,12 +39,11 @@ ping 192.168.40.10
 
 → Se deben observar intentos bloqueados entre VLANs por las políticas `deny`.
 
----
-
 <p align="center"> <img src="../magenes/Trafico Deny VLAns.png" width="800px"> </p>
 
 📌 Descripción: Captura del monitor de tráfico del firewall mostrando intentos de comunicación denegados entre VLANs. Este registro es evidencia de que las reglas deny están activas y funcionando.
 
+---
 
 ## 🔐 Prueba 2: Acceso controlado hacia el Servidor AD
 
