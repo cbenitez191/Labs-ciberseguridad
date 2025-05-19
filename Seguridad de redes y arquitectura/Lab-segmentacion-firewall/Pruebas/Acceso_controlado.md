@@ -19,8 +19,6 @@ Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios e
 - **Servicios permitidos:** DNS, LDAP, Kerberos, SMB, RPC, HTTP/HTTPS
 
 ---
-![Políticas configuradas en WatchGuard](../imagenes/politicas-firewall.png)
-
 ### 🔐 Políticas de Firewall aplicadas.
 
 | VLAN Origen | Destino (VLAN20) | Servicios permitidos                          |
@@ -31,6 +29,11 @@ Verificar que las VLANs autorizadas pueden acceder únicamente a los servicios e
 
 ---
 
+### 🖼️ Evidencia: Políticas del firewall.
+
+<p align="center">
+  <img src="imagenes/Politicas firewall 1.png" width="600px">
+</p>
 ### 🔧 Procedimiento.
 
 ### 🖼️ Evidencia: Políticas del firewall
