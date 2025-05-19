@@ -39,7 +39,7 @@ ping 192.168.40.10
 
 → Se deben observar intentos bloqueados entre VLANs por las políticas `deny`.
 
-<p align="center"> <img src="../magenes/Trafico Deny VLAns.png" width="800px"> </p>
+<p align="center"> <img src="../imagenes/Trafico Deny VLAns.png" width="800px"> </p>
 
 📌 Descripción: Captura del monitor de tráfico del firewall mostrando intentos de comunicación denegados entre VLANs. Este registro es evidencia de que las reglas deny están activas y funcionando.
 
