@@ -1,7 +1,7 @@
 # 🔐 Laboratorio: VPN con Segmentación y Monitoreo
 
 <p align="center">
-  <img src="img/vpn.png" width="800px">
+  <img src="img/vpn.png" width="300px">
 </p>
 Este laboratorio demuestra cómo implementar una solución de acceso remoto segura utilizando VPN (IKEv2/OpenVPN), aplicando segmentación de red mediante VLANs y monitoreando el tráfico autorizado y denegado a través de reglas de firewall y análisis de logs.
 
