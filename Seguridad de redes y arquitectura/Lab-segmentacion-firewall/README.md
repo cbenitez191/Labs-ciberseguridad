@@ -39,3 +39,9 @@ Este laboratorio demuestra cómo aplicar segmentación de red utilizando VLANs y
 │   ├── topologia_red.png
 │   ├── reglas_firewall.png
 │   └── nmap_resultados.png
+
+---
+
+👤 Autor: Carlos Benítez  
+📅 Fecha: 2025-05-19  
+🔐 Proyecto: CbTech.sec – Seguridad de red.
