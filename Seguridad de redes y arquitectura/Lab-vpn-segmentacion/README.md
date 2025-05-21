@@ -16,7 +16,6 @@ Este laboratorio demuestra cómo implementar una solución de acceso remoto segu
 - Validar el tráfico permitido con herramientas de red.
 - Registrar y analizar intentos de conexión exitosos y fallidos.
 
----
 
 ## 🧪 Componentes del Entorno
 
