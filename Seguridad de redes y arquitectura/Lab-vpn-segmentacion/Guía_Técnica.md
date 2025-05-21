@@ -111,13 +111,27 @@ nslookup ad.Cbetech.sec
   
 
 ```python
-Ejemplo de registros:
+Registro de eventos:
+
+2025-05-21 11:58:43 certd Certificate (subject=c=MX,st=Distrito Federal,l=Alvaro Obregon,o=Secretaria de Economia,ou=Direccion General de Normatividad Mercantil,cn=Autoridad Certificadora Raiz de la Secretaria de Economia,email=acrse@economia.gob.mx) is expired. msg_id="4001-0004"
+2025-05-21 11:58:43 certd Certificate (subject=c=MX,st=Distrito Federal,l=Alvaro Obregon,o=Secretaria de Economia,ou=Direccion General de Normatividad Mercantil,cn=Autoridad Certificadora Raiz de la Secretaria de Economia,email=acrse@economia.gob.mx) is expired. msg_id="4001-0004"
+2025-05-21 12:01:17 sessiond IKEv2 VPN user user1@Firebox-DB from 192.168.37.140 logged out assigned virtual IP is 172.16.100.1 msg_id="3E00-0004"
+2025-05-21 12:01:27 admd Authentication of IKEv2 user [user1@Firebox-DB] from 192.168.37.140 was accepted msg_id="1100-0004"
+2025-05-21 12:01:27 sessiond IKEv2 VPN user user1@Firebox-DB from 192.168.37.140 logged in assigned virtual IP is 172.16.100.1 - Number 1 of the 1 allowed login msg_id="3E00-0002"
+2025-05-21 12:01:27 iked (192.168.37.136<->192.168.37.140)'WG IKEv2 MVPN' MUVPN IPSec tunnel is established. local:0 remote:0 in-SA:0xf7ffe6f0 out-SA:0xccc7ae40 role:responder msg_id="0207-0001"
+
+```
+
+```python
+Registro de Trafico:
 
 2025-05-21 11:52:16 Allow 172.16.100.1 10.10.20.3 dns/udp 61978 53 External VLAN20 Allowed 61 127 (Allow IKEv2-Users-DNS-00) proc_id="firewall" rc="100" msg_id="3000-0148" src_user="user1@Firebox-DB" record_type="A" question="wpad.Cbtech.sec"
 2025-05-21 11:52:16 Allow 172.16.100.1 10.10.20.3 dns/udp 58178 53 External VLAN20 Allowed 63 127 (Allow IKEv2-Users-DNS-00) proc_id="firewall" rc="100" msg_id="3000-0148" src_user="user1@Firebox-DB" record_type="A" question="cbtech.cbtech.sec"
 2025-05-21 11:52:16 Deny 172.16.100.1 104.89.170.158 http/tcp 49895 80 External External Denied 52 127 (Unhandled External Packet-00) proc_id="firewall" rc="101" msg_id="3000-0148" tcp_info="offset 8 S 3456553609 win 255" geo_dst="USA" src_user="user1@Firebox-DB" duration="0" sent_bytes="52" rcvd_bytes="0"
 2025-05-21 11:54:58 Deny 172.16.100.1 104.89.170.143 http/tcp 49905 80 External External Denied 52 127 (Unhandled External Packet-00) proc_id="firewall" rc="101" msg_id="3000-0148" tcp_info="offset 8 S 2828439270 win 255" geo_dst="USA" src_user="user1@Firebox-DB" 2025-05-21 11:56:39 Deny 172.16.100.1 10.10.10.5 echo-request/icmp External VLAN10 Denied 60 127 (Unhandled External Packet-00) proc_id="firewall" rc="101" msg_id="3000-0148" src_user="user1@Firebox-DB" duration="0" sent_bytes="60" rcvd_bytes="0" type="8"
+025-05-21 12:03:28 Deny 172.16.100.1 10.10.20.3 ldap/udp 57080 389 External VLAN20 Denied 223 127 (Deny IKEv2-Users-All-Els-00) proc_id="firewall" rc="101" msg_id="3000-0148" src_user="user1@Firebox-DB" duration="0" sent_bytes="223" rcvd_bytes="0"
+2025-05-21 12:03:28 Deny 172.16.100.1 2.21.75.50 http/tcp 50075 80 External External Denied 52 127 (Unhandled External Packet-00) proc_id="firewall" rc="101" msg_id="3000-0148" tcp_info="offset 8 S 3961940293 win 255" geo_dst="COL" src_user="user1@Firebox-DB" duration="0" sent_bytes="52" rcvd_bytes="0"
+2025-05-21 12:03:29 Allow 172.16.100.1 4.153.191.4 https/tcp 50077 443 External External Allowed 52 127 (Allow IKEv2-Users-HTTPS-00) proc_id="firewall" rc="100" msg_id="3000-0148" src_ip_nat="192.168.37.136" tcp_info="offset 8 S 2611582511 win 255" geo_dst="USA" src_user="user1@Firebox-DB"
 
 ```
-
 
