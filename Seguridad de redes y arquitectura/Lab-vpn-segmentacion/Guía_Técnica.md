@@ -1,12 +1,14 @@
 # 🔐 Laboratorio: Implementación de VPN con Segmentación y Monitoreo.
 
-## 🎯 Objetivo
+
+
+## 🎯 Objetivo.
 
 Configurar una VPN segura (IKEv2/OpenVPN), aplicar segmentación por VLAN y validar el tráfico autorizado mediante reglas de firewall y análisis de logs.
 
----
 
-## 🧪 Entorno del Laboratorio
+
+## 🧪 Entorno del Laboratorio.
 
 - **Firewall:** WatchGuard (o pfSense)
 - **Red Interna VLANs:**
@@ -75,7 +77,9 @@ El firewall WatchGuard permite exportar el perfil de cliente VPN IKEv2 preconfig
 
 ### 🔒 Reglas de Firewall.
 
-![Póliticas segmentadas VPN](./img/Politicas%20VPN.png)
+<p align="center">
+  <img src="./img/Politicas%20VPN.png" width="600px">
+</p>
 
 ✅ Permitir: VPN → VLAN20 (puertos específicos)
 
