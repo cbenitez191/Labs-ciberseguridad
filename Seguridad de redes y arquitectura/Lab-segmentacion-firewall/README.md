@@ -39,7 +39,7 @@ Este laboratorio demuestra cómo aplicar segmentación de red utilizando VLANs y
 │   ├── topologia_red.png
 │   ├── reglas_firewall.png
 │   └── nmap_resultados.png
-
+```
 ---
 
 👤 Autor: Carlos Benítez  
