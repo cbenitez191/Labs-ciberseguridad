@@ -22,10 +22,10 @@ Este laboratorio tiene como finalidad diseñar y aplicar políticas de contrase�
 
 ```python
 Lab-GPO-PasswordPolicy/
-├── README.md                 # Documentación general del laboratorio
+├── README.md                  # Documentación general del laboratorio
 ├── Guia_Configuracion_GPO.md  # Guía técnica paso a paso
-├── Pruebas_Realizadas.md     # Evidencia de validación y resultados
-└── img/                      # Capturas del entorno y configuración
+├── Pruebas_Realizadas.md      # Evidencia de validación y resultados
+└── img/                       # Capturas del entorno y configuración
 ```
 
 ## ⚙️ Objetivos Específicos
@@ -54,7 +54,6 @@ Lab-GPO-PasswordPolicy/
 
 > Este proyecto forma parte de un ejercicio práctico orientado al fortalecimiento de controles de acceso y gestión segura de identidades en entornos Windows empresariales.
 
-
-👤 Autor: Carlos Benítez  
-📅 Fecha: 2025-05-21  
-🔐 Proyecto: CbTech.sec – Seguridad de red.
+>👤 Autor: Carlos Benítez  
+>📅 Fecha: 2025-05-21  
+>🔐 Proyecto: CbTech.sec – Seguridad de red.
