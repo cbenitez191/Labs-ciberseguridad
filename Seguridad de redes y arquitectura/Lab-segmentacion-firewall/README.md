@@ -1,4 +1,4 @@
-# 🧱 Lab 13: Segmentación de red y Reglas de Firewall.
+# 🧱 Segmentación de red y Reglas de Firewall.
 ## 🕸️ Topología de red
 
 <p align="center">
