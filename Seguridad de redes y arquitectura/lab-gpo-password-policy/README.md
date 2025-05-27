@@ -34,10 +34,17 @@ Lab-GPO-PasswordPolicy/
 
 Todas las configuraciones se aplican desde GPOs creadas en el servidor de dominio. Se inició con una política base denominada `Password Policy`, y se continuará ampliando con otras políticas específicas como:
 
+- `Password Policy_GPO`
 - `RDP Access Policy`
-- `SQL Access Restrictions`
 - `Desktop Restrictions Policy`
-- `Control Panel Lockdown`
+- `Corporate-wallpaper-policy`
+- `Windows Defender & Firewall Policy`
+- `USB Restrictions Policy`
+- `AppLocker or SRP Policy`
+- `BitLocker Encryption Policy`
+- `Windows Update Control Policy`
+- `Legal Logon Message Policy`
+- `Audit Logging Policy`
 - Entre otras.
 
 ## 🔒 Políticas implementadas (actuales y planificadas)
@@ -48,10 +55,9 @@ Todas las configuraciones se aplican desde GPOs creadas en el servidor de domini
 | 2   | Bloqueo de cuenta                  | Intentos fallidos, duración del bloqueo, contador                   |
 | 3   | Auditoría de eventos               | Registro de cambios de contraseña, bloqueos de cuenta               |
 | 4   | Control de sesión remota (RDP)     | Permitir o denegar RDP solo a grupos autorizados                    |
-| 5   | Restricciones a SQL Server         | Limitar accesos desde estaciones específicas                        |
-| 6   | Personalización del escritorio     | Bloqueo de cambio de fondo de pantalla                              |
-| 7   | Panel de control y configuración   | Deshabilitar acceso a herramientas administrativas                  |
-| 8   | Registro de eventos                | Activación de auditoría para inicios de sesión y cambios críticos   |
+| 5   | Personalización del escritorio     | Bloqueo de cambio de fondo de pantalla                              |
+| 6   | Panel de control y configuración   | Deshabilitar acceso a herramientas administrativas                  |
+| 7   | Registro de eventos                | Activación de auditoría para inicios de sesión y cambios críticos   |
 
 
 ## 🧪 Validación y Evidencias
