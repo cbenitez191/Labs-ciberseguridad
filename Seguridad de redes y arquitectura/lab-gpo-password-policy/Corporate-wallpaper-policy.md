@@ -33,7 +33,7 @@ Esta política define la configuración centralizada del fondo de escritorio y l
   <img src="./img/Desktop wallpaper.png" width="800px">
 </p>
 
-```python
+```powershell
 User Configuration/Policies/Administrative Templates/Desktop/Desktop
 
 > Enable Active Desktop → `Enabled`
