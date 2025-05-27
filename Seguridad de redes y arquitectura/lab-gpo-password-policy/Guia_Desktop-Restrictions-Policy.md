@@ -4,20 +4,16 @@
 
 Esta política establece restricciones en el escritorio de estaciones de trabajo Windows con el objetivo de minimizar riesgos de seguridad, evitar configuraciones indebidas por parte de los usuarios y fortalecer la postura de seguridad general del entorno. Se aplica a través de una GPO en el dominio.
 
----
 
 ## 🎯 Objetivo.
 
 Restringir el acceso a funcionalidades del escritorio y configuración de usuario en sistemas Windows para prevenir cambios no autorizados, proteger la información y cumplir con controles de seguridad establecidos por la norma ISO/IEC 27001.
-
----
 
 ## 📍 Alcance.
 
 - Aplicable a todos los **usuarios finales** dentro del dominio CBTECH_SEC.
 - Se excluyen administradores del sistema y usuarios de mantenimiento.
 
----
 
 ## ⚙️ Configuraciones GPO implementadas
 
@@ -30,7 +26,6 @@ Restringir el acceso a funcionalidades del escritorio y configuración de usuari
 | Restringir acceso a unidades (C:, D:)            | Usuario > Plantillas administrativas > Explorador de archivos                               | Habilitado |
 | Bloquear ejecución de programas (ej: cmd, regedit)| Usuario > Plantillas administrativas > Sistema                                               | Habilitado |
 
----
 
 ## 📌 Alineación con ISO/IEC 27001
 
@@ -49,8 +44,6 @@ Restringir el acceso a funcionalidades del escritorio y configuración de usuari
 - Abrir `gpmc.msc`
 - Crear una nueva GPO con nombre sugerido: `RDP Access Policy`
 - Vincularla a la OU que contiene los equipos donde se aplicará.
-
----
 
 ### 📁 1. Restringir acceso a panel de control y configuración.
 
