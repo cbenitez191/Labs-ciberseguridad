@@ -41,7 +41,7 @@ User Configuration/Policies/Administrative Templates/Desktop/Desktop
 - Wallpaper Name:
 \\CbTech\Wallpaper\Cbtech_sec.jpg
 ```
-```python
+```powershell
 User Configuration/Policies/Administrative Templates/Desktop
 
 > Prevent changuing desktop background → `Enabled`
@@ -53,7 +53,7 @@ User Configuration/Policies/Administrative Templates/Desktop
   <img src="./img/lock screen.png" width="800px">
 </p>
 
-```python
+```powershell
 Computer Configuration/Policies/Administrative Templates/Personalization
 
 > Force a specific default lock screen and logon image → `Enabled`
