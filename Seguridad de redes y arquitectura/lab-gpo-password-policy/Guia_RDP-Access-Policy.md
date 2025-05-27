@@ -76,7 +76,7 @@ Computer Configuration/Policies/Windows Settings/Segurity Settings/Windows Defen
 - Crear una regla para permitir TCP puerto `3389` únicamente desde IPs confiables (ej. segmento de administración).
 - También puede configurarse mediante:
   > powershell
-  New-NetFirewallRule -DisplayName "Allow RDP - Administración" -Direction Inbound -Protocol TCP -LocalPort 3389 -RemoteAddress 10.10.30.0/24 -Action Allow
+  New-NetFirewallRule -DisplayName "Allow RDP - Administración" -Direction Inbound -Protocol TCP -LocalPort 3389 -RemoteAddress 10.10.20.3/24 -Action Allow
 
 ```
 
